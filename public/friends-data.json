@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "name": "Rahim Uddin",
+        "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+        "email": "rahim.uddin@gmail.com",
+        "days_since_contact": 18,
+        "status": "overdue",
+        "tags": [
+            "school",
+            "close friend"
+        ],
+        "bio": "We studied together in high school. Always up for late-night chats and cricket matches.",
+        "goal": 14,
+        "next_due_date": "2026-04-10"
+    },
+    {
+        "id": 2,
+        "name": "Sarah Ahmed",
+        "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+        "email": "sarah.ahmed@gmail.com",
+        "days_since_contact": 12,
+        "status": "almost due",
+        "tags": [
+            "university",
+            "project partner"
+        ],
+        "bio": "Worked on multiple university projects together. Great at UI/UX design.",
+        "goal": 14,
+        "next_due_date": "2026-04-16"
+    },
+    {
+        "id": 3,
+        "name": "Tanvir Hasan",
+        "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+        "email": "tanvir.hasan@gmail.com",
+        "days_since_contact": 5,
+        "status": "on-track",
+        "tags": [
+            "gym",
+            "fitness"
+        ],
+        "bio": "Gym buddy who keeps me motivated. We train together every weekend.",
+        "goal": 10,
+        "next_due_date": "2026-04-19"
+    },
+    {
+        "id": 4,
+        "name": "Nusrat Jahan",
+        "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+        "email": "nusrat.jahan@gmail.com",
+        "days_since_contact": 20,
+        "status": "overdue",
+        "tags": [
+            "family friend"
+        ],
+        "bio": "Family friend since childhood. We meet during festivals and special occasions.",
+        "goal": 15,
+        "next_due_date": "2026-04-08"
+    },
+    {
+        "id": 5,
+        "name": "Imran Hossain",
+        "picture": "https://randomuser.me/api/portraits/men/12.jpg",
+        "email": "imran.hossain@gmail.com",
+        "days_since_contact": 13,
+        "status": "almost due",
+        "tags": [
+            "office",
+            "colleague"
+        ],
+        "bio": "Colleague from my first internship. Always shares helpful career advice.",
+        "goal": 14,
+        "next_due_date": "2026-04-15"
+    },
+    {
+        "id": 6,
+        "name": "Fatima Noor",
+        "picture": "https://randomuser.me/api/portraits/women/25.jpg",
+        "email": "fatima.noor@gmail.com",
+        "days_since_contact": 3,
+        "status": "on-track",
+        "tags": [
+            "neighbor"
+        ],
+        "bio": "Lives next door. We often have tea together and talk about daily life.",
+        "goal": 7,
+        "next_due_date": "2026-04-17"
+    },
+    {
+        "id": 7,
+        "name": "Arif Chowdhury",
+        "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+        "email": "arif.chowdhury@gmail.com",
+        "days_since_contact": 16,
+        "status": "overdue",
+        "tags": [
+            "travel",
+            "adventure"
+        ],
+        "bio": "Travel companion for long trips. We explored Cox's Bazar and Sylhet together.",
+        "goal": 14,
+        "next_due_date": "2026-04-11"
+    },
+    {
+        "id": 8,
+        "name": "Mariam Khan",
+        "picture": "https://randomuser.me/api/portraits/women/33.jpg",
+        "email": "mariam.khan@gmail.com",
+        "days_since_contact": 11,
+        "status": "almost due",
+        "tags": [
+            "book club"
+        ],
+        "bio": "Met at a local book club. We both enjoy mystery novels and discussions.",
+        "goal": 14,
+        "next_due_date": "2026-04-16"
+    },
+    {
+        "id": 9,
+        "name": "Sabbir Rahman",
+        "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+        "email": "sabbir.rahman@gmail.com",
+        "days_since_contact": 2,
+        "status": "on-track",
+        "tags": [
+            "gaming"
+        ],
+        "bio": "Online gaming friend. We play multiplayer games almost every night.",
+        "goal": 7,
+        "next_due_date": "2026-04-18"
+    },
+    {
+        "id": 10,
+        "name": "Jannatul Ferdous",
+        "picture": "https://randomuser.me/api/portraits/women/52.jpg",
+        "email": "jannatul.ferdous@gmail.com",
+        "days_since_contact": 19,
+        "status": "overdue",
+        "tags": [
+            "university",
+            "close friend"
+        ],
+        "bio": "One of my closest university friends. We share everything from study stress to life goals.",
+        "goal": 14,
+        "next_due_date": "2026-04-09"
+    }
+]
