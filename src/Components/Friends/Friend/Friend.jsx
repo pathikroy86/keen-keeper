@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FriendContext } from '../../../Context/FriendsCollection';
+import { useNavigate } from 'react-router';
 
 const Friend = ({ friend }) => {
     const { id, name, picture, days_since_contact, tags, status } = friend;
+    const { handleFrndData } = useContext(FriendContext);
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate("/details");
+    }
     return (
-        <div className='flex flex-col items-center shadow rounded py-5 space-y-3'>
+        <div onClick={() => {
+            handleFrndData(friend);
+            handleNavigate();
+        }} className='flex flex-col items-center shadow rounded py-5 space-y-3'>
             <div className="avatar">
                 <div className="w-24 rounded-full">
                     <img src={picture} />

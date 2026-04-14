@@ -4,6 +4,7 @@ import App from '../App';
 import Home from '../Pages/Home/Home';
 import Timeline from '../Pages/Timeline/Timeline';
 import Stats from '../Pages/Stats/Stats';
+import FriendDetails from '../Pages/FriendDetails/FriendDetails';
 
 
 export const router = createBrowserRouter([
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
             {
                 path: "stats",
                 Component: Stats
+            },
+            {
+                path: "details",
+                Component: FriendDetails
             }
         ]
     }
