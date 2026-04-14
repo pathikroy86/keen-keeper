@@ -4,8 +4,10 @@ import { IoHomeOutline } from "react-icons/io5";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { IoStatsChart } from "react-icons/io5";
 import image from '../../assets/logo.png'
+import './navbar.css'
 
 const Navbar = () => {
+
     return (
         <div className='w-full bg-base-100 shadow-sm'>
             <div className="navbar w-11/12 md:w-10/12 mx-auto">
@@ -18,9 +20,9 @@ const Navbar = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><NavLink className="btn"><IoHomeOutline /> Home</NavLink></li>
-                            <li><NavLink className="btn"><MdOutlineWatchLater /> Timeline</NavLink></li>
-                            <li><NavLink className="btn"><IoStatsChart /> Stats</NavLink></li>
+                            <li><NavLink to="/" className="btn"><IoHomeOutline /> Home</NavLink></li>
+                            <li><NavLink to="/timeline" className="btn"><MdOutlineWatchLater /> Timeline</NavLink></li>
+                            <li><NavLink to="/stats" className="btn"><IoStatsChart /> Stats</NavLink></li>
                         </ul>
 
                     </div>
@@ -29,9 +31,9 @@ const Navbar = () => {
                 <div className="navbar-center">
                 </div>
                 <div className="navbar-end gap-2 hidden lg:flex">
-                    <NavLink className="btn"><IoHomeOutline /> Home</NavLink>
-                    <NavLink className="btn"><MdOutlineWatchLater /> Timeline</NavLink>
-                    <NavLink className="btn"><IoStatsChart /> Stats</NavLink>
+                    <NavLink to="/" className="btn"><IoHomeOutline /> Home</NavLink>
+                    <NavLink to="/timeline" className="btn"><MdOutlineWatchLater /> Timeline</NavLink>
+                    <NavLink to="/stats" className="btn"><IoStatsChart /> Stats</NavLink>
                 </div>
             </div>
         </div>
