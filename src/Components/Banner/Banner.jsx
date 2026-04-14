@@ -10,19 +10,19 @@ const Banner = () => {
                 relationships that matter most.</p>
             <Link className='bg-[#244D3F] text-white font-semibold btn'><FaPlus /> Add a Friend</Link>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mb-5 md:mb-10'>
-                <div className='text-center pt-6 pb-4 border border-gray-200 rounded'>
+                <div className='text-center pt-6 pb-4 border border-gray-200 rounded px-2'>
                     <h4 className='text-[244D3F] text-3xl font-semibold'>10</h4>
                     <p className='text-lg text-[#64748B]'>Total Friends</p>
                 </div>
-                <div className='text-center pt-6 pb-4 border border-gray-200 rounded'>
+                <div className='text-center pt-6 pb-4 border border-gray-200 rounded px-2'>
                     <h4 className='text-[244D3F] text-3xl font-semibold'>3</h4>
                     <p className='text-lg text-[#64748B]'>On Track</p>
                 </div>
-                <div className='text-center pt-6 pb-4 border border-gray-200 rounded'>
+                <div className='text-center pt-6 pb-4 border border-gray-200 rounded px-2'>
                     <h4 className='text-[244D3F] text-3xl font-semibold'>6</h4>
                     <p className='text-lg text-[#64748B]'>Need Attention</p>
                 </div>
-                <div className='text-center pt-6 pb-4 border border-gray-200 rounded'>
+                <div className='text-center pt-6 pb-4 border border-gray-200 rounded px-2'>
                     <h4 className='text-[244D3F] text-3xl font-semibold'>12</h4>
                     <p className='text-lg text-[#64748B]'>Interactions This Month</p>
                 </div>

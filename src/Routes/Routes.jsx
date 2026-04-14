@@ -11,7 +11,12 @@ export const router = createBrowserRouter([
         Component: App,
         children: [
             {
-                index: true, Component: Home
+                index: true,
+                loader: async () => {
+                    const res = await fetch("/friends-data.json")
+                    return res.json();
+                },
+                Component: Home
             },
             {
                 path: "timeline",
