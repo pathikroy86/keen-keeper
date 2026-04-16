@@ -8,8 +8,8 @@ import { BsChatLeftText } from "react-icons/bs";
 import { IoVideocamOutline } from "react-icons/io5";
 
 const FriendDetails = () => {
-    const { details } = useContext(FriendContext);
-    const { name, picture, days_since_contact, status, tags, bio, goal, next_due_date } = details;
+    const { details, handleContacted } = useContext(FriendContext);
+    const { name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = details;
 
     const longFormatter = new Intl.DateTimeFormat('en-US', {
         year: 'numeric',
@@ -20,7 +20,7 @@ const FriendDetails = () => {
 
     return (
         <div className='w-11/12 md:w-10/12 lg:w-9/10 mx-auto my-5 md:my-10'>
-            <div className='grid grid-cols-3 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 <div className='col-span-1 row-span-3 space-y-3'>
                     <div className='flex flex-col items-center px-3 py-5 shadow space-y-2'>
                         <div className="avatar">
@@ -39,14 +39,14 @@ const FriendDetails = () => {
                         </div>
 
                         <p className='text-[#64748B] font-medium text-center'>"{bio}"</p>
-                        <p className='text-sm text-[#64748B]'>Preferred: email</p>
+                        <p className='text-sm text-[#64748B]'>Email: {email}</p>
                     </div>
                     <div className='btn btn-block'><PiBellSimpleZBold /> Snooze 2 Weeks</div>
                     <div className='btn btn-block'><LuArchive /> Archive</div>
                     <div className='btn btn-block text-red-400'><RiDeleteBin5Line /> Delete</div>
                 </div>
-                <div className='col-span-2 grid grid-rows-3 gap-6'>
-                    <div className='grid grid-cols-3 gap-5 row-span-1'>
+                <div className='col-span-2 grid md:grid-rows-3 gap-6'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5 row-span-1'>
                         <div className='py-5 shadow text-center'>
                             <h6 className='text-3xl text-[#244D3F] font-semibold'>{days_since_contact}</h6>
                             <p className='text-[#64748B] text-lg'>Days Since Contact</p>
@@ -70,15 +70,15 @@ const FriendDetails = () => {
                     <div className='shadow px-2 py-5 row-span-1'>
                         <p className='text-[#244D3F] text-xl font-medium mb-5'>Quick Check-In</p>
                         <div className='grid grid-cols-3 gap-5'>
-                            <div className='btn btn-xl flex flex-col h-full'>
+                            <div onClick={() => handleContacted(details, "Call")} className='btn btn-xl flex flex-col h-full'>
                                 <p><BiPhoneCall /></p>
                                 <p>Call</p>
                             </div>
-                            <div className='btn btn-xl flex flex-col h-full'>
+                            <div onClick={() => handleContacted(details, "Text")} className='btn btn-xl flex flex-col h-full'>
                                 <p className='pt-3'><BsChatLeftText /></p>
                                 <p className='pb-2'>Text</p>
                             </div>
-                            <div className='btn btn-xl flex flex-col h-full'>
+                            <div onClick={() => handleContacted(details, "Video call")} className='btn btn-xl flex flex-col h-full'>
                                 <p className='mt-2'><IoVideocamOutline /></p>
                                 <p className='mb-2'>Video</p>
                             </div>

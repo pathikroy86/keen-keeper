@@ -5,11 +5,13 @@ import App from './App.jsx'
 import { RouterProvider } from 'react-router'
 import { router } from './Routes/Routes.jsx'
 import FriendsCollection from './Context/FriendsCollection.jsx'
+import { ToastContainer } from 'react-toastify'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <FriendsCollection>
       <RouterProvider router={router}></RouterProvider>
     </FriendsCollection>
+    <ToastContainer />
   </StrictMode>,
 )

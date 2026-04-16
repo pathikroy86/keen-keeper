@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { Link } from 'react-router';
+import { toast } from 'react-toastify';
 
 export const FriendContext = createContext();
 const FriendsCollection = ({ children }) => {
@@ -7,23 +8,19 @@ const FriendsCollection = ({ children }) => {
     const handleFrndData = (current) => {
         setDetails(current);
     }
-    const [selected, setSelected] = useState([]);
-    const handleDetails = (current) => {
-        const isAvailable = selected.find(friend => current.id == friend.id);
-        if (isAvailable) {
-            alert("already available");
-            return;
-        }
-        else {
-            setSelected([...selected, current]);
-        }
-    }
 
+    const [callLog, setCallLog] = useState([]);
+    const handleContacted = (current, type) => {
+
+        setCallLog([...callLog, current]);
+        toast.success(`${type} with ${current.name}`);
+        console.log(callLog)
+    }
     const data = {
         handleFrndData,
-        handleDetails,
-        selected,
-        details
+        details,
+        handleContacted,
+        callLog
     };
 
     return (
