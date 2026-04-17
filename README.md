@@ -1,16 +1,17 @@
-# React + Vite
+Project Name: Keen Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Short description: The project is about a list of friends and interactions with them. Like, how often interected with friends, list of calls, text and video calls. Also, there is a visual presentation of the interactions with a pie chart.
 
-Currently, two official plugins are available:
+Technologies used: 
+    1. HTML5
+    2. CSS3
+    3. TailwindCSS
+    4. DaisyUi
+    5. Javascript and ES6
+    6. React js
+    7. React Router
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Key features:
+    1. Use of context Api, so that data can be used anywhere without complex props drilling of React js.
+    2. A list of calls, text and video calls with the friends and sort them according to the interaction type.
+    3. Visual representation of the communication type with a beautiful and interective pie chart. 
