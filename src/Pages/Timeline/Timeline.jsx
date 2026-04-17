@@ -15,7 +15,7 @@ const Timeline = () => {
 
     return (
         <div className='w-11/12 md:10/12 lg:9/12 mx-auto'>
-            <h1 className='text-5xl font-bold mb-3 md:mb-5'>Timeline</h1>
+            <h1 className='text-5xl font-bold mt-5 mb-3 md:mb-5'>Timeline</h1>
 
             <select
                 value={filterType}

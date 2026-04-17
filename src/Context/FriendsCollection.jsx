@@ -17,7 +17,7 @@ const FriendsCollection = ({ children }) => {
             type: type,
             timestamp: new Date()
         };
-        setCallLog(prevLog => [...prevLog, logEntry]);
+        setCallLog([...callLog, logEntry]);
         setCommsType(type);
         toast.success(`${type} with ${current.name}`);
     }
