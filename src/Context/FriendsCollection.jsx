@@ -9,18 +9,24 @@ const FriendsCollection = ({ children }) => {
         setDetails(current);
     }
 
+    const [commsType, setCommsType] = useState("");
     const [callLog, setCallLog] = useState([]);
     const handleContacted = (current, type) => {
-
-        setCallLog([...callLog, current]);
+        const logEntry = {
+            friend: current,
+            type: type,
+            timestamp: new Date()
+        };
+        setCallLog(prevLog => [...prevLog, logEntry]);
+        setCommsType(type);
         toast.success(`${type} with ${current.name}`);
-        console.log(callLog)
     }
     const data = {
         handleFrndData,
         details,
         handleContacted,
-        callLog
+        callLog,
+        commsType
     };
 
     return (

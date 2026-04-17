@@ -1,29 +1,53 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FriendContext } from '../../Context/FriendsCollection';
-import img from '../../assets/call.png'
+import imgCall from '../../assets/call.png'
+import imgText from '../../assets/text.png'
+import imgVideo from '../../assets/video.png'
 
 const Timeline = () => {
     const { callLog } = useContext(FriendContext);
-    console.log(callLog)
+    const [filterType, setFilterType] = useState('All');
+
+    const filteredLog = callLog.filter(entry => {
+        if (filterType === 'All') return true;
+        return entry.type === filterType;
+    });
+
     return (
         <div className='w-11/12 md:10/12 lg:9/12 mx-auto'>
-            <h1>Timeline</h1>
-            <select defaultValue="Pick a color" className="select">
-                <option disabled={true}>Filter timeline</option>
-                <option>Crimson</option>
-                <option>Amber</option>
-                <option>Velvet</option>
-            </select>
-            <ul className='list bg-base-100 rounded-box shadow-md'>
-                {callLog.map(call => <li className="list-row">
-                    <div><img className="size-10 rounded-box" src={img} /></div>
-                    <div>
-                        <div>{call.name}</div>
-                        <div className="text-xs uppercase font-semibold opacity-60"> <Date></Date></div>
-                    </div>
-                </li>)}
-            </ul>
+            <h1 className='text-5xl font-bold mb-3 md:mb-5'>Timeline</h1>
 
+            <select
+                value={filterType}
+                onChange={(e) => setFilterType(e.target.value)}
+                className="select mb-3 md:mb-5"
+            >
+                <option value='All'>All</option>
+                <option value='Call'>Call</option>
+                <option value='Text'>Text</option>
+                <option value='Video call'>Video</option>
+            </select>
+
+            <ul className='list bg-base-100 rounded-box shadow-md mb-3 md:mb-5'>
+                {filteredLog.map((logEntry, index) => {
+                    const { friend, type, timestamp } = logEntry;
+                    const imgSrc = type === 'Call' ? imgCall
+                        : type === 'Text' ? imgText
+                            : imgVideo;
+
+                    return (
+                        <li key={index} className="list-row">
+                            <div><img className="size-10 rounded-box" src={imgSrc} /></div>
+                            <div>
+                                <div><span className='font-semibold'>{type}</span> with {friend.name}</div>
+                                <div className="text-xs uppercase font-semibold opacity-60">
+                                    {timestamp.toLocaleString()}
+                                </div>
+                            </div>
+                        </li>
+                    );
+                })}
+            </ul>
         </div>
     );
 };
